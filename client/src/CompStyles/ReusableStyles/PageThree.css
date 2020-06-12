@@ -1,0 +1,85 @@
+.page-three-container{
+width: 100vw;
+height: 100vh;
+background-color: #000;
+}
+
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.third-container-text{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.third-container-text p{
+    font-size: 55px;
+    letter-spacing: 5px;
+    line-height: 2;
+    opacity: 0.89;
+    text-shadow: 3px 3px 3px rgba(153, 153, 153, 0.315);
+    text-align: center;    
+    color: red;
+    font-family: 'Creepster', cursive !important;
+}
+
+.third-container-text p:nth-child(1),
+.third-container-text p:nth-child(2){
+    animation: textThree 1.5s ease-in-out forwards;
+}
+
+.third-container-text p:nth-child(3),
+.third-container-text p:nth-child(4){
+    animation: textThree2 1.5s ease-in-out forwards;
+}
+
+@keyframes textThree{
+    from{
+        opacity: 0;
+        transform: translateY(-30px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes textThree2{
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.death-btn{
+    margin-top: 25px;
+    outline: none;
+    opacity: 0;
+    z-index: 99;
+    color: red;
+    border-radius: 4px;
+    padding: 8px 17px;
+    font-size: 26px;
+    border: 2px solid red;
+    background-color: transparent;
+    cursor: pointer;
+    animation: deathBtn 1s ease forwards;
+    animation-delay: 1.5s;
+}
+
+@keyframes deathBtn{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}

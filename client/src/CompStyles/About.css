@@ -1,0 +1,48 @@
+.about-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    font-size: 22.5px;
+    background-color: rgba(0, 0, 0, 0.952);
+    color: white;
+}
+
+.about-container p{
+    width: 50%;
+    text-align: center;
+}
+
+.about-container p:nth-child(3){
+    margin-top: 30px;
+    font-weight: 700;
+    padding: 5px 0;
+    color: black;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: 0.4s ease;
+    border: 2px solid #fff;
+}
+
+.about-container p:nth-child(3):hover{
+    background-color: transparent;
+}
+
+.about-container p:nth-child(3):hover a{
+    color: white;
+}
+
+.about-container a{
+    color: #000;
+    transition: 0.4s ease;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 766px){
+    .about-container p{
+    width: 90%;
+}
+}
+

@@ -1,0 +1,32 @@
+.enter-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 0 0 0 50px;
+    height: 100%;
+}
+
+.enter-head{
+    font-family: 'Metal Mania', cursive;
+    font-size: 33px;
+    letter-spacing: 1.9px;
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.315);
+    color: var(--main-text-color);
+}
+
+.enter-head h3{
+    color: rgba(255, 0, 0, 0.925);
+}
+
+.enter-tail{
+    letter-spacing: 0.75px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.enter-tail a{
+    color: var(--dim-color);
+    text-decoration: none;
+}

@@ -1,0 +1,56 @@
+.fire-work{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+.fire-work .particle{
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    z-index: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 0, 0, 0.89);
+    animation: particles 3s ease infinite none;
+}
+
+@keyframes particles{
+    0%{
+        opacity: 1;
+        transform: translateY(-10px);
+        box-shadow: 0 0 10px 5px red;
+    }50%{
+        box-shadow: 0 0 7px 3px red;
+        opacity: 0.6;
+        transform: translateY(0px);
+    }100%{
+        box-shadow: 0 0 10px 5px red;
+        opacity: 1;
+        transform: translateY(-10px);
+    }
+}
+
+.particle1{
+top: 15%;
+left: 23%;
+}
+
+.particle2{
+    top: 13%;
+    left: 73%;
+}
+
+.particle3{
+    top: 53%;
+    left: 6%;
+}
+
+.particle4{
+    top: 82%;
+    left: 55%;
+}
+
+.particle5{
+    top: 63%;
+    left: 90%;
+}

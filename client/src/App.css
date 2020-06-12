@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap" );
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+:root{
+  --sec-text-color: #fff;
+  --main-text-color: rgb(255, 0, 0);
+  --dim-color: rgba(255, 255, 255, 0.856);
+/* --highlight-text-color: #091921; */
+/* --main-bg-color: #fff; */
+/* --main-text-color: #00fff1;
+--sec-text-color: #215e65; */
+}
+
+*{
+  font-family: 'Caveat Brush', cursive;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

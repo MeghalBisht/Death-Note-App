@@ -1,0 +1,154 @@
+
+
+.bulb-on{
+transform: scale(0.8);
+filter: drop-shadow(-30px -20px 6px #ddc144c0);
+animation: bulb 1s ease-in-out infinite none;
+transition: 2s;
+}
+
+.bulb-off{
+    filter:invert(1) ;
+    transform: scale(0.8);
+    animation: bulb2 1.5s ease-in-out none;
+    transition: 2s;
+    opacity: 0;
+}
+
+@keyframes bulb{
+    0%{
+        filter: drop-shadow(-25px -20px 6px #ddc1446b);
+        
+    }50%{
+        filter: drop-shadow(-27px -18px 10px #ddc144c5);
+    }100%{
+        filter: drop-shadow(-25px -20px 6px #ddc1446b);
+    }
+}
+
+@keyframes bulb2{
+    0%{
+        opacity: 1;
+        filter:drop-shadow(-25px -20px 6px #ddc14445) invert(1);
+        
+    }50%{
+        opacity: 1;
+        filter:drop-shadow(-25px -20px 6px #ddc14469) invert(1);
+    }100%{
+        opacity: 0;
+        filter:drop-shadow(-25px -20px 6px #ddc14445) invert(1);
+    }
+}
+
+.bulb-images{
+    position: absolute;
+    width: 100%;
+    top: -20px;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.light-btn{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.light-btn button{
+    z-index: 999;
+    padding: 15px 30px;
+    font-size: 23px;
+    outline: none;
+    background-color: #000;
+    color: gold;
+    border: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+    filter: drop-shadow(3px 3px 3px #525252c0);
+    border: 2px solid black;
+}
+
+.light-btn button:hover{
+    background-color: transparent;
+    color: red;
+}
+
+.light-btn button:focus{
+    outline: none;
+}
+
+.hide{
+    transition: 2s ease-in-out;
+    display: none;
+}
+
+.page-two-outer{
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0;
+    transition: background-color 2.5s ease-in-out;
+}
+
+.light{
+    opacity: 1;
+    background-color: #fff;
+}
+
+.dark{
+    opacity: 1;
+    background-color: #000;
+}
+
+.break-glass{
+    background: url('../../images/cracked.png') center center/cover;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    animation: breakGlass 0.3s forwards;
+    animation-delay: 2.5s;
+}
+
+@keyframes breakGlass{
+    from{
+        z-index: -1;
+        transform: scale(0);
+    }to{
+        z-index: 1;
+        transform: scale(1);
+    }
+}
+
+.page-three-enter{
+    position: absolute;
+    outline: none;
+    top: 78%;
+    color: yellow;
+    left: 50%;
+    border: 0;
+    background-color: transparent;
+    transform: translate(-50%,-50%);
+    padding: 5px 22px;
+    font-size: 28px;
+    cursor: pointer;
+    opacity: 0;
+    animation: textPageTwo 1.5s infinite ease-in-out none;
+    animation-delay: 4s;
+    letter-spacing: 1.5px;
+    border: 1px solid yellow;
+    border-radius: 4px;
+    filter: drop-shadow(2px 2px 2px #bccf0bd7);
+}
+ 
+@keyframes textPageTwo{
+    from{
+        opacity: 0;
+    }to{
+        opacity: 1;
+    }
+}
