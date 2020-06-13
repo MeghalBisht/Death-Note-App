@@ -11,7 +11,7 @@ import AllDeathNotes from './Components/AllDeathNotes';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router >
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/trial" exact component={Trial} />
