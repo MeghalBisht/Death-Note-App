@@ -7,10 +7,6 @@ var ObjectID = require('mongoose').Types.ObjectId
 router.get('/users', (req, res) => {
     User.find((err, users) => {
         if (!err){
-            if(req.body.data==user){
-             return  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));  
-            }
-            else
             return res.status(200).send(users);
 
         }
