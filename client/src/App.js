@@ -1,7 +1,8 @@
 import React from 'react';
 import './App.css';
 import Landing from './Components/Landing'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom'
+import {hashHistory} from 'react-dom'
 import Trial from './Components/Trial'
 import Create from './Components/Create'
 import About from './Components/About'
@@ -11,7 +12,7 @@ import AllDeathNotes from './Components/AllDeathNotes';
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router history={hashHistory} >
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/trial" exact component={Trial} />
