@@ -9,6 +9,6 @@ const userMsg = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+});
 
-mongoose.model('User', userMsg)
+mongoose.model('User', userMsg);

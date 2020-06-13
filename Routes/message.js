@@ -5,12 +5,17 @@ const User = mongoose.model("User");
 var ObjectID = require('mongoose').Types.ObjectId
 
 router.get('/users', (req, res) => {
-
     User.find((err, users) => {
-        if (!err)
-               return res.status(200).send(users)
+        if (!err){
+            if(req.body.data==user){
+             return  res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));  
+            }
+            else
+            return res.status(200).send(users);
+
+        }
         else
-        return res.status(422).send({message: "Something went wrong"})
+        return res.status(422).send({message: "Something went wrong"});
     })
 
 })
@@ -22,6 +27,7 @@ router.get('/:id/:name', (req, res) => {
         User.findById(req.params.id)
         .then(user =>{
            return res.status(200).send(user)
+                     
         })
         .catch(err =>{
           return res.status(422).send(err)
