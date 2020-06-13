@@ -11,6 +11,9 @@ const app = express();
 app.use(cors())
 app.use(express.json())
 app.use('/', router)
+app.use(function (req, res) {
+    res.sendFile(path.join(path.resolve(__dirname, "client", "build", "index.html")));
+});
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
