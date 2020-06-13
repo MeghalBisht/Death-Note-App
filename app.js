@@ -9,6 +9,8 @@ const router = require('./Routes/message')
 const app = express();
 
 app.use(cors())
+app.use(express.json())
+app.use('/', router)
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
@@ -16,8 +18,5 @@ if (process.env.NODE_ENV === "production") {
         res.sendFile(path.resolve(__dirname, "client", "build", "index.html"));
     })
 }
-
-app.use(express.json())
-app.use('/', router)
 
 app.listen(PORT)
