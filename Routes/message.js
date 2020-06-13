@@ -9,7 +9,6 @@ router.get('/users/data', (req, res) => {
     User.find((err, users) => {
         if (!err){
             return res.status(200).send(users);
-
         }
         else
         return res.status(422).send({message: "Something went wrong"});
