@@ -5,8 +5,10 @@ const path = require('path')
 require('./db')
 require('dotenv').config();
 const router = require('./Routes/message')
-
+var bodyParser = require('body-parser');
 const app = express();
+
+app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(cors())
 app.use(express.json())

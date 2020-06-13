@@ -13,11 +13,11 @@ function AllDeathNotes() {
 
     useEffect(() => {
 
-        axios.get('/users')
+        axios.get('/users/data')
             .then(res => {
                 setUsers(res.data)
                 // console.log(res.data);
-
+                
                 setLoading(false)
             })
             .catch(err => {

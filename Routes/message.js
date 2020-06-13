@@ -2,9 +2,10 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const User = mongoose.model("User");
-var ObjectID = require('mongoose').Types.ObjectId
+var ObjectID = require('mongoose').Types.ObjectId;
 
-router.get('/users', (req, res) => {
+
+router.get('/users/data', (req, res) => {
     User.find((err, users) => {
         if (!err){
             return res.status(200).send(users);
@@ -16,7 +17,7 @@ router.get('/users', (req, res) => {
 
 })
 
-router.get('/:id/:name', (req, res) => {
+router.get('/:id/:name/data', (req, res) => {
     if (!ObjectID.isValid(req.params.id))
         return res.status(400).send(`no record with given id: ${req.params.id}`)
     else {

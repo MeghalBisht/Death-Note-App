@@ -19,10 +19,10 @@ function PageOne({ match }) {
     useEffect(() => {
 
         if (match.params.id) {
-            setId(`/${match.params.id}/${match.params.name}`)
+            setId(`/${match.params.id}/${match.params.name}/data`)
         }
 
-        axios.get(id)
+        axios.get(`/${match.params.id}/${match.params.name}/data`)
             .then(res => {
                 setUser({
                     name: res.data.name,
