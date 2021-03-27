@@ -4,4 +4,4 @@ Death Note App to pen down a fake death note for your friends! Inspired by : Dea
 Tech used: 
 1. MERN Stack
 
-Link: https://mern-death-note.herokuapp.com/
+Link: https://deathn0te.herokuapp.com/
